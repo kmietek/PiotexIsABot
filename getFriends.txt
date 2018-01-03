@@ -1,0 +1,165 @@
+private List<List<string>> SelectFriends(WebBrowser page)
+        {
+            bool realNameCoreckt = false;
+            bool notRealNameCoreckt = false;
+
+            string realName = "";
+            string notRealName = "";
+
+            string document = "";
+            List<string> RealList = new List<string>();
+            List<string> FbList = new List<string>();
+
+            page.Document.Body.ScrollIntoView(false);
+
+            document = page.DocumentText;
+
+            for (int i = 0; i < document.Length; i++)
+            {
+                //<div class="fsl fwb fcb"><a href="https://www.facebook.com/
+                if (i > 30 &&
+                    document[i - 29] == 'c' &&
+                    document[i - 28] == 'l' &&
+                    document[i - 27] == 'a' &&
+                    document[i - 26] == 's' &&
+                    document[i - 25] == 's' &&
+                    document[i - 24] == '=' &&
+                    document[i - 23] == '"' &&
+                    document[i - 22] == 'f' &&
+                    document[i - 21] == 's' &&
+                    document[i - 20] == 'l' &&
+                    document[i - 19] == ' ' &&
+                    document[i - 18] == 'f' &&
+                    document[i - 17] == 'w' &&
+                    document[i - 16] == 'b' &&
+                    document[i - 15] == ' ' &&
+                    document[i - 14] == 'f' &&
+                    document[i - 13] == 'c' &&
+                    document[i - 12] == 'b' &&
+                    document[i - 11] == '"' &&
+                    document[i - 10] == '>' &&
+                    document[i - 9] == '<' &&
+                    document[i - 8] == 'A' &&
+                    document[i - 7] == ' ' &&
+                    document[i - 6] == 'h' &&
+                    document[i - 5] == 'r' &&
+                    document[i - 4] == 'e' &&
+                    document[i - 3] == 'f' &&
+                    document[i - 2] == '=' &&
+                    document[i - 1] == '"')
+                {
+                    int iCopy = i + "https://www.facebook.com/".Length;
+                    realName = "";
+
+                    if (document[iCopy+7] == '.' &&
+                        document[iCopy+6] == 'e' &&
+                        document[iCopy+5] == 'l' &&
+                        document[iCopy+4] == 'i' &&
+                        document[iCopy+3] == 'f' &&
+                        document[iCopy+2] == 'o' &&
+                        document[iCopy+1] == 'r' &&
+                        document[iCopy] == 'p' )
+                    {
+                        while (document[iCopy] != '&')
+                        {
+                            realName += document[iCopy];
+                            iCopy++;
+                        }
+                    }
+                    else
+                    {
+                        while (document[iCopy] != '?')
+                        {
+                            realName += document[iCopy];
+                            iCopy++;
+                        }
+                    }
+                }
+                //class="_s0 _4ooo _1ve7 _rv img" role="img" aria-label="
+                if (i > 56 &&
+                    document[i - 55] == 'c' &&
+                    document[i - 54] == 'l' &&
+                    document[i - 53] == 'a' &&
+                    document[i - 52] == 's' &&
+                    document[i - 51] == 's' &&
+                    document[i - 50] == '=' &&
+                    document[i - 49] == '"' &&
+                    document[i - 48] == '_' &&
+                    document[i - 47] == 's' &&
+                    document[i - 46] == '0' &&
+                    document[i - 45] == ' ' &&
+                    document[i - 44] == '_' &&
+                    document[i - 43] == '4' &&
+                    document[i - 42] == 'o' &&
+                    document[i - 41] == 'o' &&
+                    document[i - 40] == 'o' &&
+                    document[i - 39] == ' ' &&
+                    document[i - 38] == '_' &&
+                    document[i - 37] == '1' &&
+                    document[i - 36] == 'v' &&
+                    document[i - 35] == 'e' &&
+                    document[i - 34] == '7' &&
+                    document[i - 33] == ' ' &&
+                    document[i - 32] == '_' &&
+                    document[i - 31] == 'r' &&
+                    document[i - 30] == 'v' &&
+                    document[i - 29] == ' ' &&
+                    document[i - 28] == 'i' &&
+                    document[i - 27] == 'm' &&
+                    document[i - 26] == 'g' &&
+                    document[i - 25] == '"' &&
+                    document[i - 24] == ' ' &&
+                    document[i - 23] == 'r' &&
+                    document[i - 22] == 'o' &&
+                    document[i - 21] == 'l' &&
+                    document[i - 20] == 'e' &&
+                    document[i - 19] == '=' &&
+                    document[i - 18] == '"' &&
+                    document[i - 17] == 'i' &&
+                    document[i - 16] == 'm' &&
+                    document[i - 15] == 'g' &&
+                    document[i - 14] == '"' &&
+                    document[i - 13] == ' ' &&
+                    document[i - 12] == 'a' &&
+                    document[i - 11] == 'r' &&
+                    document[i - 10] == 'i' &&
+                    document[i - 9] == 'a' &&
+                    document[i - 8] == '-' &&
+                    document[i - 7] == 'l' &&
+                    document[i - 6] == 'a' &&
+                    document[i - 5] == 'b' &&
+                    document[i - 4] == 'e' &&
+                    document[i - 3] == 'l' &&
+                    document[i - 2] == '=' &&
+                    document[i - 1] == '"')
+                {
+                    notRealName = "";
+                    int iCopy = i ;
+                    while (document[iCopy] != '"')
+                    {
+                        notRealName += document[iCopy];
+                        iCopy++;
+                    }
+                }
+                if (realName != "" && notRealName != "")
+                {
+                    if (!FbList.Contains(notRealName))
+                    {
+                        FbList.Add(realName);
+                    }
+                    if (!RealList.Contains(realName))
+                    {
+                        RealList.Add(notRealName);
+                    }
+                    notRealName = "";
+                    realName = "";
+                }
+
+            }
+
+            return new List<List<string>>
+            {
+                RealList,
+                FbList
+            };
+        }
