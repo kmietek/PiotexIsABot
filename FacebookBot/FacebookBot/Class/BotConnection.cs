@@ -62,8 +62,8 @@ namespace FacebookBot.Class
             newStream.Write(byteArray, 0, byteArray.Length); // Send the data.
 
             using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse()) { }
-            for (int i = 0; i <= 100; i++)
-            {
+
+            
 
 
                     getUrl = "https://www.facebook.com/piotr.swierzy.5/friends?lst=100004001157365%3A100004001157365%3A1514929047&source_ref=pb_friends_tl";
@@ -83,10 +83,10 @@ namespace FacebookBot.Class
 
                         htmlBody.Load(getResponse.GetResponseStream());
                         getResponse.Close();
-                        HtmlNode node = htmlBody.GetElementbyId("friends");
+                       
 
                     }
-                }
+                
 
 
         }
