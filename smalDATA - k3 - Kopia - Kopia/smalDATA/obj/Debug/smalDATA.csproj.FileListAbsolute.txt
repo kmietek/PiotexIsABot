@@ -1,0 +1,45 @@
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\smalDATA.exe.config
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\smalDATA.exe
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\smalDATA.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\ManagerBP.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\FacebookToolsBP.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\ManagerBP.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\FacebookToolsBP.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.csprojResolveAssemblyReference.cache
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.Properties.Resources.resources
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.csproj.GenerateResource.Cache
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.exe
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\ToDelLibrary.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\InterfacesBP.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\InterfacesBP.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\DBCommunication.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\Npgsql.dll
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\DBCommunication.pdb
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\Npgsql.xml
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.Form1.resources
+C:\Users\Piotr\Desktop\smalDATA\smalDATA\obj\Debug\smalDATA.TestForm.resources
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\smalDATA.exe.config
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\smalDATA.exe
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\smalDATA.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\DBCommunication.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\FacebookToolsBP.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\ManagerBP.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\Npgsql.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\InterfacesBP.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\DBCommunication.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\FacebookToolsBP.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\ManagerBP.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\ToDelLibrary.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\Npgsql.xml
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\bin\Debug\InterfacesBP.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.csprojResolveAssemblyReference.cache
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.Form1.resources
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.Properties.Resources.resources
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.csproj.GenerateResource.Cache
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.exe
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\smalDATA\obj\Debug\smalDATA.pdb

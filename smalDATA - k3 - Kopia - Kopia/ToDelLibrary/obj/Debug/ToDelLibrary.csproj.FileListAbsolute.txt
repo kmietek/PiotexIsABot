@@ -1,0 +1,12 @@
+C:\Users\Piotr\Desktop\smalDATA\ToDelLibrary\bin\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA\ToDelLibrary\bin\Debug\ToDelLibrary.pdb
+C:\Users\Piotr\Desktop\smalDATA\ToDelLibrary\obj\Debug\ToDelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\smalDATA\ToDelLibrary\obj\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA\ToDelLibrary\obj\Debug\ToDelLibrary.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\bin\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\bin\Debug\ToDelLibrary.pdb
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\obj\Debug\ToDelLibrary.Feedback.resources
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\obj\Debug\ToDelLibrary.csproj.GenerateResource.Cache
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\obj\Debug\ToDelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\obj\Debug\ToDelLibrary.dll
+C:\Users\Piotr\Desktop\smalDATA - k3 - Kopia - Kopia\ToDelLibrary\obj\Debug\ToDelLibrary.pdb

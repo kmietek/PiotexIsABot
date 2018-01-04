@@ -11,10 +11,10 @@ namespace FacebookBot.Class
 {
     class BotConnection
     {
- 
 
 
-    
+
+
 
 
         public BotConnection()
@@ -56,19 +56,12 @@ namespace FacebookBot.Class
             getRequest.ProtocolVersion = HttpVersion.Version11;
             getRequest.AllowAutoRedirect = true;
             getRequest.ContentType = "application/x-www-form-urlencoded";
-             byte[] byteArray = Encoding.ASCII.GetBytes(postData);
+            byte[] byteArray = Encoding.ASCII.GetBytes(postData);
             getRequest.ContentLength = byteArray.Length;
             Stream newStream = getRequest.GetRequestStream(); //open connection
             newStream.Write(byteArray, 0, byteArray.Length); // Send the data.
 
-<<<<<<< HEAD
-            using (HttpWebResponse getResponse = (HttpWebResponse) getRequest.GetResponse())
-            {
-                
-            }
-=======
             HtmlDocument htmlBodyTest = new HtmlDocument();
->>>>>>> eac35a5d1fce48fc1abf53240d5003f2aa2015db
 
             using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse())
             {
@@ -76,39 +69,34 @@ namespace FacebookBot.Class
                 htmlBodyTest.Load(getResponse.GetResponseStream());
                 getResponse.Close();
 
-<<<<<<< HEAD
-                    getUrl = "https://www.facebook.com/oliwia.piotrowska.5686/friends";
-=======
 
             }
 
 
 
 
-            getUrl = "https://www.facebook.com/piotr.swierzy.5/friends?lst=100004001157365%3A100004001157365%3A1514929047&source_ref=pb_friends_tl";
->>>>>>> eac35a5d1fce48fc1abf53240d5003f2aa2015db
-                    getRequest.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
-                    getRequest = (HttpWebRequest)WebRequest.Create(getUrl);
-                    getRequest.CookieContainer = cookies; //recover cookies First request
-                    getRequest.Method = WebRequestMethods.Http.Get;
-                    getRequest.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36";
-                    getRequest.AllowWriteStreamBuffering = true;
-                    getRequest.ProtocolVersion = HttpVersion.Version11;
-                    getRequest.AllowAutoRedirect = true;
-                    getRequest.ContentType = "application/x-www-form-urlencoded";
+            getUrl = "https://www.facebook.com/profile.php?id=100004726745558&lst=100023878293399%3A100004726745558%3A1515106536&sk=friends&source_ref=pb_friends_tl";
+            getRequest.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
+            getRequest = (HttpWebRequest)WebRequest.Create(getUrl);
+            getRequest.CookieContainer = cookies; //recover cookies First request
+            getRequest.Method = WebRequestMethods.Http.Get;
+            getRequest.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36";
+            getRequest.AllowWriteStreamBuffering = true;
+            getRequest.ProtocolVersion = HttpVersion.Version11;
+            getRequest.AllowAutoRedirect = true;
+            getRequest.ContentType = "application/x-www-form-urlencoded";
 
-                    HtmlDocument htmlBody = new HtmlDocument();
+            HtmlDocument htmlBody = new HtmlDocument();
 
-                    using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse())
-                    {
+            using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse())
+            {
 
-                        htmlBody.Load(getResponse.GetResponseStream());
-                        string a = htmlBody.ParsedText;
-                        getResponse.Close();
-                       
+                htmlBody.Load(getResponse.GetResponseStream());
+                getResponse.Close();
 
-                    }
-                
+
+            }
+
 
 
         }
