@@ -10,7 +10,7 @@ namespace TestProject
         [TestMethod]
         public void GetUserBirthDayTest()
         {
-            var data = "document".GetBirthDateofUser();
+            var data = "123href:11-2-1999/sdfsdf/".GetBirthDateofUser();
         }
         [TestMethod]
         public void GetUserSexTest()
@@ -20,7 +20,7 @@ namespace TestProject
         [TestMethod]
         public void GetUserFriendsListTest()
         {
-            var data = "document".GetUriToFriends();
+            var data = "123href:piotr/123href:adam/123hr:zle/123h:zle/".GetUriToFriends();
         }
         [TestMethod]
         public void GetUserResidenceTest()
