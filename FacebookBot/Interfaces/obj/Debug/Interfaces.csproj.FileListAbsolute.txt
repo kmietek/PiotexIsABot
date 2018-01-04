@@ -1,0 +1,5 @@
+C:\Users\Piotr\Desktop\piotrek\FacebookBot\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Piotr\Desktop\piotrek\FacebookBot\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Piotr\Desktop\piotrek\FacebookBot\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Piotr\Desktop\piotrek\FacebookBot\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Piotr\Desktop\piotrek\FacebookBot\Interfaces\obj\Debug\Interfaces.pdb
