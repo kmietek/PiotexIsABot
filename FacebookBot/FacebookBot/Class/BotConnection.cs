@@ -45,7 +45,7 @@ namespace FacebookBot.Class
 
             // LOGIN TO FACEBOOK ACCOUNT <<<<-----------------------------------------------------
             string getUrl = "https://www.facebook.com/login.php?login_attempt=1";
-            string postData = String.Format("email={0}&pass={1}", "login", "password");
+            string postData = String.Format("email={0}&pass={1}", "politechopol2017@gmail.com", "politechopol2017@gmail.com");
             HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(getUrl);
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             getRequest.CookieContainer = new CookieContainer();
@@ -61,12 +61,15 @@ namespace FacebookBot.Class
             Stream newStream = getRequest.GetRequestStream(); //open connection
             newStream.Write(byteArray, 0, byteArray.Length); // Send the data.
 
-            using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse()) { }
+            using (HttpWebResponse getResponse = (HttpWebResponse) getRequest.GetResponse())
+            {
+                
+            }
 
             
 
 
-                    getUrl = "https://www.facebook.com/piotr.swierzy.5/friends?lst=100004001157365%3A100004001157365%3A1514929047&source_ref=pb_friends_tl";
+                    getUrl = "https://www.facebook.com/oliwia.piotrowska.5686/friends";
                     getRequest.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
                     getRequest = (HttpWebRequest)WebRequest.Create(getUrl);
                     getRequest.CookieContainer = cookies; //recover cookies First request
@@ -82,6 +85,7 @@ namespace FacebookBot.Class
                     {
 
                         htmlBody.Load(getResponse.GetResponseStream());
+                        string a = htmlBody.ParsedText;
                         getResponse.Close();
                        
 
