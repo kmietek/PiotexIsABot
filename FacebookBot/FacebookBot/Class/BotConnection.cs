@@ -61,12 +61,21 @@ namespace FacebookBot.Class
             Stream newStream = getRequest.GetRequestStream(); //open connection
             newStream.Write(byteArray, 0, byteArray.Length); // Send the data.
 
-            using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse()) { }
+            HtmlDocument htmlBodyTest = new HtmlDocument();
 
-            
+            using (HttpWebResponse getResponse = (HttpWebResponse)getRequest.GetResponse())
+            {
+
+                htmlBodyTest.Load(getResponse.GetResponseStream());
+                getResponse.Close();
 
 
-                    getUrl = "https://www.facebook.com/piotr.swierzy.5/friends?lst=100004001157365%3A100004001157365%3A1514929047&source_ref=pb_friends_tl";
+            }
+
+
+
+
+            getUrl = "https://www.facebook.com/piotr.swierzy.5/friends?lst=100004001157365%3A100004001157365%3A1514929047&source_ref=pb_friends_tl";
                     getRequest.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
                     getRequest = (HttpWebRequest)WebRequest.Create(getUrl);
                     getRequest.CookieContainer = cookies; //recover cookies First request
@@ -74,6 +83,7 @@ namespace FacebookBot.Class
                     getRequest.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36";
                     getRequest.AllowWriteStreamBuffering = true;
                     getRequest.ProtocolVersion = HttpVersion.Version11;
+                    getRequest.AllowAutoRedirect = true;
                     getRequest.ContentType = "application/x-www-form-urlencoded";
 
                     HtmlDocument htmlBody = new HtmlDocument();
