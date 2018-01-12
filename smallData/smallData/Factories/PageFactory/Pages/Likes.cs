@@ -7,7 +7,11 @@ namespace smallData.Factories.PageFactory.Pages
     {
         public override bool GetData(WebBrowser page)
         {
-            throw new System.NotImplementedException();
+            return true;
+        }
+        public override object getObj()
+        {
+            return this;
         }
     }
 }

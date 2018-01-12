@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using smallData.Factories.PageFactory;
+using smallData.Factories.PageFactory.Abstract;
 using smallData.Helpers;
 
 namespace smallData
@@ -47,10 +48,18 @@ namespace smallData
 
         private void Cycle(object sender, EventArgs eventArgs)
         {
+            List<bool> stop = new List<bool>();
+
             foreach (var enumPage in EnumHelper.GetValues<PageEnum>())
             {
-
+                bool val = Factories.PageFactory.PageFactory.StartPageMethod(enumPage);
+                stop.Add(val);
             }
+            if (stop.All(x => x))
+            {
+                Restart();
+            }
+
         }
 
 

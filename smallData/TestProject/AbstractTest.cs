@@ -22,5 +22,6 @@ namespace TestProject
 
             Assert.AreEqual(q.GetType(),typeof(Friends));
         }
+
     }
 }

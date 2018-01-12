@@ -14,5 +14,11 @@ namespace TestProject
             var webB2 = new WebBrowser();
             Assert.AreEqual(webB2.GetType(),webB1.GetType());
         }
+
+        [TestMethod]
+        public void GetObjTest()
+        {
+            var obj = PageFactory.GetObject(PageEnum.friends);
+        }
     }
 }
