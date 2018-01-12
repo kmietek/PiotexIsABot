@@ -12,9 +12,7 @@ namespace smallData.Helpers
     {
         public static Dictionary<string,object> GetClassesFromAbstractClass<T>() where T:class 
         {
-            Friends f = new Friends();
             Dictionary<string,object> q = new Dictionary<string, object>();
-            Dictionary<string,object> result = new Dictionary<string, object>();
 
             var a = Assembly.GetAssembly(typeof(T)).GetTypes();
             var b = a.Where(m => m.BaseType == typeof(T)).ToList();

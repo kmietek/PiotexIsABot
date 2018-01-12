@@ -3,6 +3,8 @@
     public enum PageEnum
     {
         friends,
+        likes,
+        localization
 
     }
 }

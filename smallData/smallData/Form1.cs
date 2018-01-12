@@ -15,6 +15,9 @@ namespace smallData
 {
     public partial class Form1 : Form
     {
+        private string id = "piotr.swierzy.5";
+
+
         private Timer timer1;
         public static Form form1;
 
@@ -30,15 +33,26 @@ namespace smallData
             timer1.Interval = 5000;
             timer1.Tick += Cycle;
             timer1.Start();
+
+            int x = 0;
+            foreach (var enumPage in EnumHelper.GetValues<PageEnum>())
+            {
+                PageFactory.GetPage(enumPage).Location = new Point(x, 0);                                          // ok
+                PageFactory.GetPage(enumPage).Size = new Size(200, 500);
+                PageFactory.GetPage(enumPage).Navigate(String.Format("https://www.facebook.com/{0}/{1}",id,enumPage.ToString().ToLower()));
+                this.Controls.Add(PageFactory.GetPage(enumPage));
+                x += 200;
+            }
         }
 
         private void Cycle(object sender, EventArgs eventArgs)
         {
-            foreach (var browser in EnumHelper.GetValues<PageEnum>())
+            foreach (var enumPage in EnumHelper.GetValues<PageEnum>())
             {
-                
+
             }
         }
+
 
         private void Restart()
         {
