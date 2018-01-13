@@ -1,5 +1,0 @@
-C:\Users\Piotr\Desktop\smalDATA\EnumsBP\bin\Debug\EnumsBP.dll
-C:\Users\Piotr\Desktop\smalDATA\EnumsBP\bin\Debug\EnumsBP.pdb
-C:\Users\Piotr\Desktop\smalDATA\EnumsBP\obj\Debug\EnumsBP.csproj.CoreCompileInputs.cache
-C:\Users\Piotr\Desktop\smalDATA\EnumsBP\obj\Debug\EnumsBP.dll
-C:\Users\Piotr\Desktop\smalDATA\EnumsBP\obj\Debug\EnumsBP.pdb

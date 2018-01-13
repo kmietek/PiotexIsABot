@@ -45,13 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\PageFactory\Abstract\PageInfo.cs" />
-    <Compile Include="Factories\PageFactory\Interfaces\IPage.cs" />
-    <Compile Include="Factories\PageFactory\PageEnum.cs" />
-    <Compile Include="Factories\PageFactory\PageFactory.cs" />
-    <Compile Include="Factories\PageFactory\Pages\Friends.cs" />
-    <Compile Include="Factories\PageFactory\Pages\Likes.cs" />
-    <Compile Include="Factories\PageFactory\Pages\Localization.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\BasicClass.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Friend.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Like.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Localization.cs" />
+    <Compile Include="Facebook\FacebookManager.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\FacebookPage.cs" />
+    <Compile Include="Facebook\Interfaces\IBasicClass.cs" />
+    <Compile Include="Facebook\Interfaces\IPage.cs" />
+    <Compile Include="Facebook\Enums\EFacebookEnum.cs" />
+    <Compile Include="Facebook\Factory\FacebookFactory.cs" />
+    <Compile Include="Facebook\Classes\FactoryClasses\Friends.cs" />
+    <Compile Include="Facebook\Classes\FactoryClasses\Likes.cs" />
+    <Compile Include="Facebook\Classes\FactoryClasses\Localizations.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,5 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

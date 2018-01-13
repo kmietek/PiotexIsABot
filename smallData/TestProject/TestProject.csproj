@@ -52,7 +52,6 @@
     <Compile Include="AbstractTest.cs" />
     <Compile Include="EnumTest.cs" />
     <Compile Include="FactoryTest.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

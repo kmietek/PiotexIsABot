@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using smallData.Factories.PageFactory;
-using smallData.Factories.PageFactory.Abstract;
 using smallData.Helpers;
 
 namespace smallData
@@ -36,12 +35,12 @@ namespace smallData
             timer1.Start();
 
             int x = 0;
-            foreach (var enumPage in EnumHelper.GetValues<PageEnum>())
+            foreach (var enumPage in EnumHelper.GetValues<EFacebookEnum>())
             {
-                PageFactory.GetPage(enumPage).Location = new Point(x, 0);                                          // ok
-                PageFactory.GetPage(enumPage).Size = new Size(200, 500);
-                PageFactory.GetPage(enumPage).Navigate(String.Format("https://www.facebook.com/{0}/{1}",id,enumPage.ToString().ToLower()));
-                this.Controls.Add(PageFactory.GetPage(enumPage));
+                FacebookFactory.GetPage(enumPage).Location = new Point(x, 0);                                          // ok
+                FacebookFactory.GetPage(enumPage).Size = new Size(200, 500);
+                FacebookFactory.GetPage(enumPage).Navigate(String.Format("https://www.facebook.com/{0}/{1}",id,enumPage.ToString().ToLower()));
+                this.Controls.Add(FacebookFactory.GetPage(enumPage));
                 x += 200;
             }
         }
@@ -50,9 +49,9 @@ namespace smallData
         {
             List<bool> stop = new List<bool>();
 
-            foreach (var enumPage in EnumHelper.GetValues<PageEnum>())
+            foreach (var enumPage in EnumHelper.GetValues<EFacebookEnum>())
             {
-                bool val = Factories.PageFactory.PageFactory.StartPageMethod(enumPage);
+                bool val = Factories.PageFactory.FacebookFactory.StartPageMethod(enumPage);
                 stop.Add(val);
             }
             if (stop.All(x => x))

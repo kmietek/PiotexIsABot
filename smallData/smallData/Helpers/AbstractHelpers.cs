@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using smallData.Factories.PageFactory.Abstract;
 using smallData.Factories.PageFactory.Interfaces;
 using smallData.Factories.PageFactory.Pages;
 
