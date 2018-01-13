@@ -19,7 +19,7 @@ namespace smallData.Factories.PageFactory
         }
 
 
-        private static Dictionary<EFacebookEnum,WebBrowser> PageDictionary = new Dictionary<EFacebookEnum, WebBrowser>();
+        public static Dictionary<EFacebookEnum,WebBrowser> PageDictionary = new Dictionary<EFacebookEnum, WebBrowser>();
 
         public static WebBrowser GetPage(EFacebookEnum enuma)
         {

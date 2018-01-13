@@ -1,9 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace smallData.Factories.PageFactory.Interfaces
 {
-    public interface IPage
+    public interface IPage<T>
     {
-        bool GetData(WebBrowser page);
+        List<T> GetData(string page);
+        bool AmReady();
     }
 }

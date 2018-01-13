@@ -41,23 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Facebook\Classes\AbstractClasses\PageInfo.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\BasicClass.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\FacebookPage.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Friend.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Like.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\Localization.cs" />
     <Compile Include="Facebook\Classes\FactoryClasses\Friends.cs" />
     <Compile Include="Facebook\Classes\FactoryClasses\Likes.cs" />
-    <Compile Include="Facebook\Classes\FactoryClasses\Localization.cs" />
-    <Compile Include="Facebook\Enums\PageEnum.cs" />
-    <Compile Include="Facebook\Factory\PageFactory.cs" />
+    <Compile Include="Facebook\Classes\FactoryClasses\Localizations.cs" />
+    <Compile Include="Facebook\Enums\EFacebookEnum.cs" />
+    <Compile Include="Facebook\FacebookManager.cs" />
+    <Compile Include="Facebook\Factory\FacebookFactory.cs" />
+    <Compile Include="Facebook\Interfaces\IBasicClass.cs" />
     <Compile Include="Facebook\Interfaces\IPage.cs" />
+    <Compile Include="Helpers\AbstractHelpers.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Facebook\Classes\BasicClasses\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Helpers\Helpers.csproj">
-      <Project>{23C5DDA3-9352-413B-B331-595EC08BE346}</Project>
-      <Name>Helpers</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

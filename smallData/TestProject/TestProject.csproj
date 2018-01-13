@@ -58,9 +58,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\smallData\smallData.csproj">
-      <Project>{d12bdb8a-6859-4855-bc88-328b8b857c24}</Project>
-      <Name>smallData</Name>
+    <ProjectReference Include="..\Factories\Factories.csproj">
+      <Project>{2a5b4604-e78e-4187-8df2-863642d90d83}</Project>
+      <Name>Factories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

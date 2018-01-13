@@ -1,17 +1,19 @@
-﻿using System.Windows.Forms;
-using smallData.Factories.PageFactory.Abstract;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
+using smallData.Facebook.Classes.AbstractClasses;
 
 namespace smallData.Factories.PageFactory.Pages
 {
-    public class Likes : PageInfo
+    public class Likes : FacebookPage
     {
-        public override bool GetData(WebBrowser page)
+        public override List<BasicClass> GetData(string page)
         {
-            return true;
+            throw new System.NotImplementedException();
         }
-        public override object getObj()
+
+        public override bool AmReady()
         {
-            return this;
+            throw new System.NotImplementedException();
         }
     }
 }
