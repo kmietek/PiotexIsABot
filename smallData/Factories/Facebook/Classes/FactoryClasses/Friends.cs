@@ -9,9 +9,13 @@ namespace smallData.Factories.PageFactory.Pages
     {
         private static string oldVersion = "";
 
+        
 
         public override List<BasicClass> GetData(string page)
         {
+            // metoda filtrująca zwraca liste obiektów
+
+            // 1) 
             return new List<BasicClass>{new Like()};
         }
 

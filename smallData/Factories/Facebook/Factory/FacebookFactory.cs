@@ -27,24 +27,10 @@ namespace smallData.Factories.PageFactory
         }
 
 
-//        public static Dictionary<EFacebookEnum,bool> PageMethodsDictionary = new Dictionary<EFacebookEnum, bool>();
-
         public static FacebookPage GetObject(EFacebookEnum enuma)
         {
-            var a = smallData.Helpers.AbstractHelpers.GetClassesFromAbstractClass<FacebookPage>();
-            
-            return a[enuma.ToString()] as FacebookPage;
+//            var a = smallData.Helpers.AbstractHelpers.GetClassesFromAbstractClass<FacebookPage>();
+            return smallData.Helpers.AbstractHelpers.GetFacebookPageClassesInstance(enuma);
         }
-
-        public static bool StartPageMethod(EFacebookEnum enuma)
-        {
-            var a = smallData.Helpers.AbstractHelpers.GetClassesFromAbstractClass<FacebookPage>();
-            var x = a[enuma.ToString()] as FacebookPage;
-            bool tel = x.AmReady();
-//            bool tel = x.GetData(PageDictionary[enuma]);
-            return x != null && tel;
-        }
-
-        
     }
 }

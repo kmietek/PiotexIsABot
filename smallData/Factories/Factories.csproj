@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase\DBManager.cs" />
     <Compile Include="Facebook\Classes\AbstractClasses\BasicClass.cs" />
     <Compile Include="Facebook\Classes\AbstractClasses\FacebookPage.cs" />
     <Compile Include="Facebook\Classes\BasicClasses\Friend.cs" />

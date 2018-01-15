@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
+using Factories.DataBase;
+using smallData.Facebook.Classes.AbstractClasses;
 using smallData.Factories.PageFactory;
 using smallData.Helpers;
 
@@ -10,6 +12,7 @@ namespace smallData.Facebook
 {
     public class FacebookManager
     {
+        private Dictionary<EFacebookEnum,List<BasicClass>> slownik = new Dictionary<EFacebookEnum, List<BasicClass>>();
         private string id = "piotr.swierzy.5";
 
 
@@ -25,6 +28,7 @@ namespace smallData.Facebook
             foreach (var enumPage in EnumHelper.GetValues<EFacebookEnum>())
             {
                 FacebookFactory.GetPage(enumPage).Navigate(String.Format("https://www.facebook.com/{0}/{1}", id, enumPage.ToString().ToLower()));
+                slownik.Add(enumPage,null);
             }
         }
 
@@ -34,12 +38,16 @@ namespace smallData.Facebook
 
             foreach (var enumPage in FacebookFactory.PageDictionary)
             {
-                //bool val = Factories.Facebook.Factory.FacebookFactory.GetFacebookClasses(enumPage).AmReady();
-                //PageFactory.PageFactory.StartPageMethod(enumPage);
-                //stop.Add(val);
+                enumPage.Value.Document.Body.ScrollIntoView(false);  //  1 scroll = +20 items to document text 
+                var lista = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key).GetData(enumPage.Value.DocumentText); //take document text and return list of objects
+                var bol = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key).AmReady();
+
+                slownik[enumPage.Key] = lista;
+                stop.Add(bol);
             }
             if (stop.All(x => x))
             {
+                DBManager.StartDBProcesses(slownik);
                 Restart();
             }
 

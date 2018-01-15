@@ -4,7 +4,7 @@
     {
         friends,
         likes,
-        localization
+        localizations
 
     }
 }
