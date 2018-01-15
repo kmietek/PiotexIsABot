@@ -2,7 +2,7 @@
 
 namespace Factories.Facebook.Classes.BasicClasses
 {
-    public class Localization : BasicClass
+    public class AboutBasic : BasicClass
     {
         public string Country = "NN";
         public string City = "NN";

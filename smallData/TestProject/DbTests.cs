@@ -23,19 +23,19 @@ namespace TestProject
                 {
                     EFacebookEnum.friends, new List<BasicClass>
                     {
-                        new Friend()
+                        new FriendBasic()
                     }
                 },
                 {
                     EFacebookEnum.likes, new List<BasicClass>
                     {
-                        new Like()
+                        new LikeBasic()
                     }
                 },
                 {
-                    EFacebookEnum.localizations, new List<BasicClass>
+                    EFacebookEnum.abouts, new List<BasicClass>
                     {
-                        new Localization()
+                        new AboutBasic()
                     }
                 }
             };

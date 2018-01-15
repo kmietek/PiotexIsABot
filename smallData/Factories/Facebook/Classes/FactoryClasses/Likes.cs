@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using smallData.Facebook.Classes.AbstractClasses;
+using smallData.Facebook.Classes.BasicClasses;
 
 namespace smallData.Factories.PageFactory.Pages
 {
@@ -8,12 +9,12 @@ namespace smallData.Factories.PageFactory.Pages
     {
         public override List<BasicClass> GetData(string page)
         {
-            throw new System.NotImplementedException();
+            return new List<BasicClass> { new LikeBasic() };
         }
 
         public override bool AmReady()
         {
-            throw new System.NotImplementedException();
+            return false;
         }
     }
 }

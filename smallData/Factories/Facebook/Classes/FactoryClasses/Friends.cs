@@ -16,12 +16,12 @@ namespace smallData.Factories.PageFactory.Pages
             // metoda filtrująca zwraca liste obiektów
 
             // 1) 
-            return new List<BasicClass>{new Like()};
+            return new List<BasicClass>{new LikeBasic()};
         }
 
         public override bool AmReady()
         {
-            throw new System.NotImplementedException();
+            return false;
         }
     }
 

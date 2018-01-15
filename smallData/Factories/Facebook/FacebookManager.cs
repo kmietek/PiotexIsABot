@@ -2,33 +2,47 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using Factories.DataBase;
 using smallData.Facebook.Classes.AbstractClasses;
 using smallData.Factories.PageFactory;
 using smallData.Helpers;
+using Timer = System.Windows.Forms.Timer;
 
 namespace smallData.Facebook
 {
     public class FacebookManager
     {
         private Dictionary<EFacebookEnum,List<BasicClass>> slownik = new Dictionary<EFacebookEnum, List<BasicClass>>();
-        private string id = "piotr.swierzy.5";
+        private string id = "bartek.kusza19";
 
 
         private Timer timer1;
 
-        public void StartProcesses(object sender, EventArgs e)
+        public void StartProcesses()
         {
             timer1 = new Timer();
-            timer1.Interval = 5000;
+            timer1.Interval = 1000;
             timer1.Tick += Cycle;
-            timer1.Start();
 
             foreach (var enumPage in EnumHelper.GetValues<EFacebookEnum>())
             {
                 FacebookFactory.GetPage(enumPage).Navigate(String.Format("https://www.facebook.com/{0}/{1}", id, enumPage.ToString().ToLower()));
                 slownik.Add(enumPage,null);
+                FacebookFactory.GetPage(enumPage).DocumentCompleted += OnDocumentCompleted;
+            }
+
+            //timer1.Start();
+        }
+
+        private int licznik = 0;
+        private void OnDocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs webBrowserDocumentCompletedEventArgs)
+        {
+            licznik++;
+            if (licznik == FacebookFactory.PageDictionary.Count)    // test that all pages are completed
+            {
+                timer1.Start();
             }
         }
 
@@ -50,7 +64,6 @@ namespace smallData.Facebook
                 DBManager.StartDBProcesses(slownik);
                 Restart();
             }
-
         }
 
 

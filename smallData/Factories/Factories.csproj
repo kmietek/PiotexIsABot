@@ -44,12 +44,12 @@
     <Compile Include="DataBase\DBManager.cs" />
     <Compile Include="Facebook\Classes\AbstractClasses\BasicClass.cs" />
     <Compile Include="Facebook\Classes\AbstractClasses\FacebookPage.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\Friend.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\Like.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\Localization.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\FriendBasic.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\LikeBasic.cs" />
+    <Compile Include="Facebook\Classes\BasicClasses\AboutBasic.cs" />
     <Compile Include="Facebook\Classes\FactoryClasses\Friends.cs" />
     <Compile Include="Facebook\Classes\FactoryClasses\Likes.cs" />
-    <Compile Include="Facebook\Classes\FactoryClasses\Localizations.cs" />
+    <Compile Include="Facebook\Classes\FactoryClasses\About.cs" />
     <Compile Include="Facebook\Enums\EFacebookEnum.cs" />
     <Compile Include="Facebook\FacebookManager.cs" />
     <Compile Include="Facebook\Factory\FacebookFactory.cs" />

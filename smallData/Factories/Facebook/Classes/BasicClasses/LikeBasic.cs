@@ -2,7 +2,7 @@
 
 namespace smallData.Facebook.Classes.BasicClasses
 {
-    public class Like : BasicClass
+    public class LikeBasic : BasicClass
     {
         public string PageName = "NN";
         public string PathId = "NN";
