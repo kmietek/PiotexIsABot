@@ -19,7 +19,7 @@ namespace smallData.Factories.PageFactory.Pages
 
         public override bool AmReady()
         {
-            return false;
+            return true;
         }
     }
 }

@@ -8,36 +8,27 @@ namespace smallData.Factories.PageFactory.Pages
     public class Friends : FacebookPage
     {
         private static string oldVersion = "";
+        private bool _Ready = false;
+        public override bool AmReady() => _Ready;
 
-        
-
-        public override List<BasicClass> GetData(string page)
+        public override List<BasicClass> GetData(string document)
         {
             List<BasicClass> lista = new List<BasicClass>();
-            if (page.Length > oldVersion.Length)
+            if (document.Length > oldVersion.Length)
             {
-                oldVersion = page;
+                oldVersion = document;
                 return null;
             }
 
             // now you can filer the docText to find informations!
 
-            bool realNameCoreckt = false;
-            bool notRealNameCoreckt = false;
-
-            string realName = "";
-            string notRealName = "";
-
-            string document = page;
-            List<string> RealList = new List<string>();
-            List<string> FbList = new List<string>();
-
             FriendBasic friend = new FriendBasic();
             for (int i = 0; i < document.Length; i++)
             {
-                string dataLine = "";
+                string dataLine;
+                int licznik;
 
-                int licznik = 0;
+                licznik = 0;
                 dataLine = "class=\"_s0 _4ooo _1ve7 _rv img\" role=\"img\" aria-label=\"";
                 while (licznik < dataLine.Length && dataLine[licznik] == document[i])
                 {
@@ -77,6 +68,7 @@ namespace smallData.Factories.PageFactory.Pages
                         friend.Surename = surname;
                     }
                 }
+
                 dataLine = "<DIV class=\"fsl fwb fcb\"><A href=\"https://www.facebook.com/";
                 licznik = 0;
                 while (licznik < dataLine.Length && dataLine[licznik] == document[i])
@@ -108,13 +100,9 @@ namespace smallData.Factories.PageFactory.Pages
                     }
                 }
             }
+            _Ready = true;
             return lista;
         }
 
-        public override bool AmReady()
-        {
-            return false;
-        }
     }
-    
 }
