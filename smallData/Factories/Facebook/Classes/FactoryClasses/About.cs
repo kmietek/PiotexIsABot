@@ -10,6 +10,10 @@ namespace smallData.Factories.PageFactory.Pages
     {
         public override List<BasicClass> GetData(string page)
         {
+            //about?section=education
+             
+            // https://www.facebook.com/damian.kleszcz.7/about?section=living
+
             return new List<BasicClass> { new LikeBasic() };
         }
 

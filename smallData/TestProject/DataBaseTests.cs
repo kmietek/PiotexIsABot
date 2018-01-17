@@ -13,7 +13,7 @@ using smallData.Helpers;
 namespace TestProject
 {
     [TestClass]
-    public class DbTests
+    public class DataBaseTests
     {
         [TestMethod]
         public void DbStartTest()
@@ -33,7 +33,7 @@ namespace TestProject
                     }
                 },
                 {
-                    EFacebookEnum.abouts, new List<BasicClass>
+                    EFacebookEnum.about, new List<BasicClass>
                     {
                         new AboutBasic()
                     }

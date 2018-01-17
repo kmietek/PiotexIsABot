@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using smallData.Factories.PageFactory;
+using smallData.Factories.PageFactory.Pages;
 
 namespace TestProject
 {
@@ -20,5 +21,6 @@ namespace TestProject
         {
             var obj = FacebookFactory.GetObject(EFacebookEnum.friends);
         }
+
     }
 }

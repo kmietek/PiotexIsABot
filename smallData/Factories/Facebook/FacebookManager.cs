@@ -18,12 +18,12 @@ namespace smallData.Facebook
         private string id = "bartek.kusza19";
 
 
-        private Timer timer1;
+        public Timer timer1;
 
         public void StartProcesses()
         {
             timer1 = new Timer();
-            timer1.Interval = 1000;
+            timer1.Interval = 3000;
             timer1.Tick += Cycle;
 
             foreach (var enumPage in EnumHelper.GetValues<EFacebookEnum>())
@@ -52,17 +52,22 @@ namespace smallData.Facebook
 
             foreach (var enumPage in FacebookFactory.PageDictionary)
             {
-                enumPage.Value.Document.Body.ScrollIntoView(false);  //  1 scroll = +20 items to document text 
-                var lista = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key).GetData(enumPage.Value.DocumentText); //take document text and return list of objects
-                var bol = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key).AmReady();
+                if (enumPage.Value.DocumentText.Length > 10)
+                {
 
-                slownik[enumPage.Key] = lista;
-                stop.Add(bol);
-            }
-            if (stop.All(x => x))
-            {
-                DBManager.StartDBProcesses(slownik);
-                Restart();
+                    enumPage.Value.Document.Body.ScrollIntoView(false); //  1 scroll = +20 items to document text 
+                    var lista = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key)
+                        .GetData(enumPage.Value.DocumentText); //take document text and return list of objects
+                    var bol = Factories.PageFactory.FacebookFactory.GetObject(enumPage.Key).AmReady();
+
+                    slownik[enumPage.Key] = lista;
+                    stop.Add(bol);
+                }
+                if (stop.All(x => x))
+                {
+                    DBManager.StartDBProcesses(slownik);
+                    Restart();
+                }
             }
         }
 

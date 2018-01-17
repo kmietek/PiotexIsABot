@@ -15,12 +15,14 @@ namespace smallData
     public partial class Form1 : Form
     {
         public static Form form1;
+        private FacebookManager manager;
         public Form1()
         {
             form1 = this;
             add();
             InitializeComponent();
-            new FacebookManager().StartProcesses();
+            manager = new FacebookManager();
+            manager.StartProcesses();
         }
 
         public void add()
@@ -35,5 +37,6 @@ namespace smallData
                 Controls.Add(web);
             }
         }
+
     }
 }
