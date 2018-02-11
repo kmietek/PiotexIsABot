@@ -28,21 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.stopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // stopButton
+            // 
+            this.stopButton.BackColor = System.Drawing.Color.DarkRed;
+            this.stopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.stopButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stopButton.Location = new System.Drawing.Point(0, 0);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(50, 173);
+            this.stopButton.TabIndex = 0;
+            this.stopButton.Text = "Stop";
+            this.stopButton.UseVisualStyleBackColor = false;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 264);
+            this.ClientSize = new System.Drawing.Size(2984, 762);
+            this.Controls.Add(this.stopButton);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button stopButton;
     }
 }
 

@@ -7,7 +7,7 @@ namespace smallData.Factories.PageFactory.Pages
 {
     public class Likes : FacebookPage
     {
-        public override List<BasicClass> GetData(string page)
+        public override List<BasicClass> GetData(string document)
         {
             return new List<BasicClass> { new LikeBasic() };
         }

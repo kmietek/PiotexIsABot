@@ -8,5 +8,8 @@ namespace Factories.Facebook.Classes.BasicClasses
         public string City = "NN";
         public string Street = "NN";
         public string HomeNumber = "NN";
+        public string BitrhDay = "NN";
+        public string BitrhMounth = "NN";
+        public string BitrhYear = "NN";
     }
 }

@@ -11,7 +11,7 @@ namespace TestProject
         [TestMethod]
         public void GetValuesFromPageDictionaryTest()
         {
-            var webB1 = FacebookFactory.GetPage(EFacebookEnum.friends);
+            var webB1 = PageFactory.GetPage(EnumPages.Friends);
             var webB2 = new WebBrowser();
             Assert.AreEqual(webB2.GetType(),webB1.GetType());
         }
@@ -19,7 +19,7 @@ namespace TestProject
         [TestMethod]
         public void GetObjTest()
         {
-            var obj = FacebookFactory.GetObject(EFacebookEnum.friends);
+            var obj = MainFactory.GetMainClass(EnumPages.Friends);
         }
 
     }

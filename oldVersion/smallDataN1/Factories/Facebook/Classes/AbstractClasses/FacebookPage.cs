@@ -7,7 +7,7 @@ namespace smallData.Facebook.Classes.AbstractClasses
     public abstract class FacebookPage : IPage<BasicClass>
     {
         //data base connection
-        public abstract List<BasicClass> GetData(string page);
+        public abstract List<BasicClass> GetData(string document);
 
         public abstract bool AmReady();
     }

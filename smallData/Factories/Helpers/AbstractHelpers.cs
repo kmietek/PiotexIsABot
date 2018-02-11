@@ -13,20 +13,20 @@ namespace smallData.Helpers
     {
         static AbstractHelpers()
         {
-            var a = Assembly.GetAssembly(typeof(FacebookPage)).GetTypes();
-            var b = a.Where(m => m.BaseType == typeof(FacebookPage)).ToList();
+            var a = Assembly.GetAssembly(typeof(MainAbstractClass)).GetTypes();
+            var b = a.Where(m => m.BaseType == typeof(MainAbstractClass)).ToList();
 
             foreach (var item in b)
             {
                 Assembly assembly = Assembly.GetExecutingAssembly();
-                var res = assembly.CreateInstance(item.FullName) as FacebookPage;
+                var res = assembly.CreateInstance(item.FullName) as MainAbstractClass;
                 FacebookPageClassesInstance.Add(item.Name.ToLower(), res);
             }
         }
 
-        private static Dictionary<string, FacebookPage> FacebookPageClassesInstance = new Dictionary<string, FacebookPage>();
+        private static Dictionary<string, MainAbstractClass> FacebookPageClassesInstance = new Dictionary<string, MainAbstractClass>();
 
-        public static FacebookPage GetFacebookPageClassesInstance(EFacebookEnum enuma)
+        public static MainAbstractClass GetFacebookPageClassesInstance(EnumPages enuma)
         {
             return FacebookPageClassesInstance[enuma.ToString().ToLower()];
         }

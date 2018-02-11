@@ -1,4 +1,6 @@
-﻿namespace smallData.Helpers
+﻿using Factories.Facebook.Classes.BasicClasses;
+
+namespace smallData.Helpers
 {
     public static class StringHelpers
     {

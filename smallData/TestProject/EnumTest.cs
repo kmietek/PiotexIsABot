@@ -10,9 +10,9 @@ namespace TestProject
         [TestMethod]
         public void GetItemFromEnumTest()
         {
-            var iEnumerator = smallData.Helpers.EnumHelper.GetValues<EFacebookEnum>();
+            var iEnumerator = smallData.Helpers.EnumHelper.GetValues<EnumPages>();
             var friends = iEnumerator.ElementAt(0);
-            Assert.AreEqual(EFacebookEnum.friends, friends);
+            Assert.AreEqual(EnumPages.Friends, friends);
         }
     }
 }

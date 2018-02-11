@@ -18,26 +18,20 @@ namespace TestProject
         [TestMethod]
         public void DbStartTest()
         {
-            var b = new Dictionary<EFacebookEnum, List<BasicClass>>
+            var b = new Dictionary<EnumPages, List<AncillaryAbstractClass>>
             {
                 {
-                    EFacebookEnum.friends, new List<BasicClass>
+                    EnumPages.Friends, new List<AncillaryAbstractClass>
                     {
-                        new FriendBasic()
+                        new AncillaryFriends()
                     }
                 },
                 {
-                    EFacebookEnum.likes, new List<BasicClass>
+                    EnumPages.Likes, new List<AncillaryAbstractClass>
                     {
-                        new LikeBasic()
+                        new AncillaryLikes()
                     }
                 },
-                {
-                    EFacebookEnum.about, new List<BasicClass>
-                    {
-                        new AboutBasic()
-                    }
-                }
             };
             DBManager.StartDBProcesses(b);
         }

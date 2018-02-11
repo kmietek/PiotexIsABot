@@ -42,23 +42,62 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\DBManager.cs" />
-    <Compile Include="Facebook\Classes\AbstractClasses\BasicClass.cs" />
-    <Compile Include="Facebook\Classes\AbstractClasses\FacebookPage.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\FriendBasic.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\LikeBasic.cs" />
-    <Compile Include="Facebook\Classes\BasicClasses\AboutBasic.cs" />
-    <Compile Include="Facebook\Classes\FactoryClasses\Friends.cs" />
-    <Compile Include="Facebook\Classes\FactoryClasses\Likes.cs" />
-    <Compile Include="Facebook\Classes\FactoryClasses\About.cs" />
-    <Compile Include="Facebook\Enums\EFacebookEnum.cs" />
-    <Compile Include="Facebook\FacebookManager.cs" />
-    <Compile Include="Facebook\Factory\FacebookFactory.cs" />
-    <Compile Include="Facebook\Interfaces\IBasicClass.cs" />
-    <Compile Include="Facebook\Interfaces\IPage.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\AncillaryAbstractClass.cs" />
+    <Compile Include="Facebook\Classes\AbstractClasses\MainAbstractClass.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillaryRelationship.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillaryContactInfo.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillaryLiving.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillaryLiveEvents.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillarySpecificInformations.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\About\AncillaryEducation.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Importants\AncillaryFriends.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Importants\AncillaryGroups.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Importants\AncillaryLikes.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryBooks.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryCommingEvents.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryPastEvents.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryGames.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryMovies.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryMusic.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryOpinions.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillarySportAthletes.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillarySportTeams.cs" />
+    <Compile Include="Facebook\Classes\AncillaryClasses\Rest\AncillaryTvPrograms.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainContactInfo.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainEducation.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainLiveEvents.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainLiving.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainRelationship.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\MainSpecificInformations.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Importants\MainFriends.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Importants\MainGroups.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Importants\MainLikes.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\About\WstepnaKoncepcjaFiltrow.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainBooks.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainPastEvents.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainCommingEvents.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainGames.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainMovies.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainMusic.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainOpinions.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainSportAthletes.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainSportTeams.cs" />
+    <Compile Include="Facebook\Classes\MainClasses\Rest\MainTvPrograms.cs" />
+    <Compile Include="Facebook\Enums\EnumPages.cs" />
+    <Compile Include="Facebook\Main\FacebookManager.cs" />
+    <Compile Include="Facebook\Factory\AncillaryFactory.cs" />
+    <Compile Include="Facebook\Factory\MainFactory.cs" />
+    <Compile Include="Facebook\Factory\PageFactory.cs" />
+    <Compile Include="Facebook\Interfaces\IAncillary.cs" />
+    <Compile Include="Facebook\Interfaces\IMain.cs" />
+    <Compile Include="Root\RootFactory.cs" />
     <Compile Include="Helpers\AbstractHelpers.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\StringHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="A\Notatki.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

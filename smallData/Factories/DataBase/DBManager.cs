@@ -10,7 +10,7 @@ namespace Factories.DataBase
 {
     public class DBManager
     {
-        public static void StartDBProcesses(Dictionary<EFacebookEnum, List<BasicClass>> slownik)    //todo nie dopuścić do kilki wpisów z tej samej factoy classes
+        public static void StartDBProcesses(Dictionary<EnumPages, List<AncillaryAbstractClass>> slownik)    //todo nie dopuścić do kilki wpisów z tej samej factoy classes
         {
             foreach (var kfp in slownik)    //all
             {
@@ -20,10 +20,10 @@ namespace Factories.DataBase
                 string query;
                 if (kfp.Value != null)
                 {
-                    foreach (BasicClass item in kfp.Value)      // list of BasicClass
+                    foreach (AncillaryAbstractClass item in kfp.Value)      // list of AncillaryAbstractClass
                     {
                         Type myType = item.GetType();
-                        var props = myType.GetFields(BindingFlags.Instance | BindingFlags.Public);      //get instance of BasicClass
+                        var props = myType.GetFields(BindingFlags.Instance | BindingFlags.Public);      //get instance of AncillaryAbstractClass
 
                         table_name = myType.Name.ToLower() + "Table";
 

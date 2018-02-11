@@ -14,14 +14,6 @@ namespace TestProject
     [TestClass]
     public class AbstractTest
     {
-        [TestMethod]
-        public void GetItemFromAbstractClassTest()
-        {
-            var a = AbstractHelpers.GetClassesFromAbstractClass<FacebookPage>();
-            object q = a[EFacebookEnum.friends.ToString()];
-
-            Assert.AreEqual(q.GetType(),typeof(Friends));
-        }
 
     }
 }

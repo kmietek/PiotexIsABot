@@ -74,8 +74,8 @@ namespace smallData.Facebook
 
         private void Restart()
         {
-            Process.Start(@"C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\smalDATA.exe");
-            Application.Exit();
+            //Process.Start(@"C:\Users\Piotr\Desktop\smalDATA\smalDATA\bin\Debug\smalDATA.exe");
+            //Application.Exit();
         }
     }
 }
