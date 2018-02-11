@@ -22,6 +22,7 @@ namespace smallData
         {
             form1 = this;
 //            test();
+//            test();
             start();
             InitializeComponent();
         }
