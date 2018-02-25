@@ -22,15 +22,14 @@ namespace TestApp
             InitializeComponent();
         }
 
-        private EnumPages page = EnumPages.CommingEvents;        //     <==    !!!!!!!!!!!!!!!!!!!!
-        private string id = "larysa.hadasch";
+        private Config conf = new Config();
 
         private void start()
         {
-            var web = PageFactory.GetPage(page);
+            var web = PageFactory.GetPage(conf.page);
             web.Size = new Size(800, 800);
             Controls.Add(web);
-            var manager = new FacebookSpecyficManager(web,page,id);
+            var manager = new FacebookSpecyficManager(web,conf.page,conf.id);
             manager.StartProcesses();
 
         }
